@@ -9,14 +9,17 @@ interface IState {
     isClicked: boolean,
 }
 
+
 export class Text extends React.Component<TextProps, IState> {
+
         constructor(props: TextProps){
             super(props);
             this.state = {
                 isClicked: false,
             }
         }
-
+        
+        
         render(){
             return(
                 <p style={{color: this.props.color, ...this.props.style}}

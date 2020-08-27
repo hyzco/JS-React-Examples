@@ -11,7 +11,8 @@ function App() {
                     <StyledH1 style={{ fontSize: 100 }} color='pink'> Hasan Ali Yuzgec</StyledH1>
             </Card>
             <Text color="blue" style={{ fontSize: 50 }}>
-                    Test
+                   <h1>Hello</h1>
+                   <h1>Hello</h1>
             </Text>
         </div>
     

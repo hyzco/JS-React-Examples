@@ -1,12 +1,41 @@
 import React, { useContext } from 'react';
+const themes = {
+    light: {
+      foreground: "#000000",
+      background: "#eeeeee"
+    },
+    dark: {
+      foreground: "#ffffff",
+      background: "#222222"
+    }
+  };
+  
+const ThemeContext = React.createContext(themes.dark);
 
-// our context sets a property of type string
-export const LanguageContext = React.createContext({ lang: 'en' });
 
 export const Display = () => {
-  // lang will be of type string
-  const { lang } = useContext(LanguageContext);
   return <>
-    <p>Your selected language: {lang}</p>
+     <ThemeContext.Provider value={themes.dark}>
+      <Toolbar />
+    </ThemeContext.Provider>
   </>
 }
+
+
+function Toolbar(props:any) {
+    return (
+      <div>
+        <ThemedButton />
+      </div>
+    );
+  }
+  
+  function ThemedButton() {
+    const theme = useContext(ThemeContext);
+    theme.background = "purple";
+    return (
+      <button style={{ background: theme.background, color: theme.foreground }}>
+        I am styled by theme context! Click to change
+      </button>
+    );
+  }
