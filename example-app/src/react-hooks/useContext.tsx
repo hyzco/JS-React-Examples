@@ -12,7 +12,6 @@ const themes = {
   
 const ThemeContext = React.createContext(themes.dark);
 
-
 export const Display = () => {
   return <>
      <ThemeContext.Provider value={themes.dark}>
@@ -20,7 +19,6 @@ export const Display = () => {
     </ThemeContext.Provider>
   </>
 }
-
 
 function Toolbar(props:any) {
     return (

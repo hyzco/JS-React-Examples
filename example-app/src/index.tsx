@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
 //import App from './props-states/App';
-import App from './react-hooks/App';
+//import App from './react-hooks/App'; -- WILL CONTINUE
+import App from './rxjs/App';
 
 import * as serviceWorker from './serviceWorker';
 
